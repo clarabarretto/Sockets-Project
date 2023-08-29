@@ -19,7 +19,8 @@ def main():
             data, client_address = server_socket.recvfrom(1024)
             decoded_data = data.decode("utf-8")
 
-            if decoded_data == 'Parar transmissão':
+            if (not data or decoded_data == 'Parar transmissão'):
+                print("Conexão encerrada")
                 break
 
             response = calculator(decoded_data)

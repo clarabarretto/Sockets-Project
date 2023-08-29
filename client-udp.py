@@ -9,7 +9,7 @@ def main():
             mensagem = input('Digite a expressão desejada: ')
             client_socket.sendto(mensagem.encode('utf-8'), server_address)
 
-            if mensagem == 'Parar transmissão':
+            if (not mensagem or mensagem == 'Parar transmissão'):
                 print('Você encerrou a transimmsão')
                 break
 
