@@ -1,11 +1,5 @@
 import socket
-
-def calculator(expression):
-    try:
-        result = eval(expression)
-        return str(result)
-    except:
-        return "Expressão inválida"
+from Services.calculator import calculator
 
 def main():
     server_address = ("localhost", 1980)
