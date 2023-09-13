@@ -1,26 +1,30 @@
 import socket
+import time
+
 from Utils.dnsConnection import DNSrequest
 
 def init():
-    url = DNSrequest('calculadoraTCP')
-    print(url)
+    port = DNSrequest('calculadoraTCP')
+    main(port)
 
-def main():
+def main(port):
     instructions = [  
         '2+2',
         '18+16',
         '17*15',
-        '20/5'
+        '20/5',
+        '13+22'
     ]
 
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_address = ('localhost', 1980)
+    server_address = ('localhost', port)
 
     try:
         client_socket.connect(server_address)
         print("Conexão estabelecida com o servidor")
 
         for instruction in instructions:
+            initial_time = time.time()
             client_socket.send(instruction.encode('utf-8'))
 
             if (instruction == 'Parar transmissão'):
@@ -28,18 +32,13 @@ def main():
                 break
 
             response = client_socket.recv(1024)
+            final_time = time.time()
+
             print(response.decode('utf-8'))
 
-        # while True:
-        #     mensagem = input('Digite a expressão desejada: ')
-        #     client_socket.send(mensagem.encode('utf-8'))
+            time_diff = final_time - initial_time
 
-        #     if (not mensagem or mensagem == 'Parar transmissão'):
-        #         print('Você encerrou a transmissão')
-        #         break
-
-        #     response = client_socket.recv(1024)
-        #     print(response.decode('utf-8'))
+            print(time_diff, 'TME DIFF AQUI')
 
     except socket.error:
         print("Erro durante a execução")

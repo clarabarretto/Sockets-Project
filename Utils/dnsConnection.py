@@ -7,10 +7,13 @@ def DNSrequest(url):
     try:
         while True:
             client_socket.sendto(url.encode('utf-8'), server_address)
-            print(url)
+            print('Requisição para DNS feita')
 
             response, _ = client_socket.recvfrom(1024)
-            return response.decode('UTF-8')
+
+            parsed_response = int(response.decode('UTF-8'))
+            print(f'Resposta DNS {parsed_response}')
+            return parsed_response
     except socket.error:
         return ("Erro durante a execução")
 

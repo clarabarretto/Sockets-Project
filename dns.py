@@ -1,7 +1,7 @@
 import socket
 
 services = {
-    'calculadoraudp': 1960,
+    'calculadoraUDP': 1960,
     'calculadoraTCP': 1980
 }
     
