@@ -20,7 +20,7 @@ obs: os protocolos (TCP e UDP) não precisam ser executados necessariamente em c
 
 ## Tecnologias utilizadas
 - Linguagem de Programação: Python
-- Bibliotecas: socket; threading
+- Bibliotecas: socket; time
 
 ## Desenvolvedores:
 - Antônio Henrique Souza Lima - ahsl@cin.ufpe.br 
