@@ -12,7 +12,7 @@ def DNSrequest(url):
             response, _ = client_socket.recvfrom(1024)
 
             parsed_response = int(response.decode('UTF-8'))
-            print(f'Resposta DNS {parsed_response}')
+            print(f'Resposta DNS: ( PORT: {parsed_response} )')
             return parsed_response
     except socket.error:
         return ("Erro durante a execução")

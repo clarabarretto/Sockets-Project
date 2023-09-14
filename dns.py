@@ -27,13 +27,11 @@ def main():
 
             service_port = services[service_url]
             server_socket.sendto(str(service_port).encode('utf-8'), client_address)
-            break
+            # break
     except socket.error:
-        return "Erro durante a execução"
-
-    finally:
         server_socket.close()
         print("DNS finalizdo")
+        return "Erro durante a execução"
 
 if __name__ == "__main__":
     main()

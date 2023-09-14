@@ -13,7 +13,8 @@ def main(port):
         '18+16',
         '17*15',
         '20/5',
-        '13+22'
+        '13+22',
+        'Parar transmissão'
     ]
 
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -38,7 +39,7 @@ def main(port):
 
             time_diff = final_time - initial_time
 
-            print(time_diff, 'TME DIFF AQUI')
+            print(time_diff, 'Time diff')
 
     except socket.error:
         print("Erro durante a execução")
@@ -48,4 +49,3 @@ def main(port):
 
 if __name__ == "__main__":
     init()
-    # main()

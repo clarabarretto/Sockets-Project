@@ -21,7 +21,7 @@ def main():
             server_socket.sendto(response.encode('utf-8'), client_address)
 
             if response != "Expressão inválida":
-                print(f"A expressão inserida foi: {decoded_data}")
+                print(f"A expressão recebida foi: {decoded_data}")
                 print(f"O resultado da expressão é: {response}")
 
     except socket.error:
