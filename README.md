@@ -23,6 +23,16 @@ obs: os protocolos (TCP e UDP) não precisam ser executados necessariamente em c
 - Linguagem de Programação: Python
 - Bibliotecas: socket; time
 
+## Capturas:
+
+- Terminal:
+  
+![Captura de Tela 2023-09-14 às 17 08 51](https://github.com/clarabarretto/Sockets-Project/assets/111030247/8134c701-33d4-44d6-a190-dd9cf105d54d)
+
+- Wireshark:
+  
+![image](https://github.com/clarabarretto/Sockets-Project/assets/111030247/57a1504b-f5e1-4da3-81b5-aaf20393c4e0)
+
 ## Desenvolvedores:
 - Antônio Henrique Souza Lima - ahsl@cin.ufpe.br 
 - Maria Clara Falcão Guerra Barretto - mcfgb@cin.ufpe.br 
