@@ -7,6 +7,7 @@ Projeto que tem como objetivo criar aplicações cliente-servidor usando o proto
 ## Intalação:
 1. Certifique-se de que possui o Python 3 instalado
 2. Clone o repositório do GitHub para ter acesso aos códigos
+3. Abra um terminal para cada arquivo a ser executado
 
 ## Executando:
 1. Execute o programa dns.py
